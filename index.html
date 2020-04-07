@@ -1,20 +1,30 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>R HAHAHA Title</title>
-</head>
-<body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-<h2>123</h2>
-<h3>123</h3>
-<h5>123</h5>
-<h7 id="hahaha">123</h7>
-<div>
-<button type="button" onclick='document.getElementById("hahaha").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-</div>
-
-<button type="button" onclick='document.getElementById("hahaha").innerHTML="123"'>BACK</button>
-</body>
+    <head>TEST123</head>
+    <body><!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              xfbml            : true,
+              version          : 'v6.0'
+            });
+          };
+  
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+  
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+          attribution=setup_tool
+          page_id="114472006878966"
+    theme_color="#67b868"
+    logged_in_greeting="安安你好"
+    logged_out_greeting="安安你好">
+        </div>
+    </body>
 </html>
